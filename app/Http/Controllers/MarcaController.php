@@ -12,7 +12,7 @@ class MarcaController extends Controller
     {
         $marcas = Marca::with('productos')->get();
         return response()->json($marcas);
-    }
+    } 
 
     public function store(StoreMarcaRequest $request)
     {
