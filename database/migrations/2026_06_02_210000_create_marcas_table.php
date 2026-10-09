@@ -12,7 +12,6 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('slug')->unique();
-            $table->text('descripcion')->nullable();
             $table->string('logo')->nullable();
             $table->boolean('activo')->default(true);
             $table->timestamps();
