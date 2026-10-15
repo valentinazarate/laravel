@@ -8,10 +8,11 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles; // <- Importa el trait HasRoles de Spatie
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable; // <- Añade HasApiTokens a la lista de traits utilizados por el modelo User
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;// <- Añade HasApiTokens a la lista de traits utilizados por el modelo User
     /** @use HasFactory<UserFactory> */
 
     /**
